@@ -916,10 +916,7 @@ class ListImage extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     }, "\u1EA2nh: ", id))));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "fetchData", () => {
-      console.log(this.props.id);
       isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()(_constant_URL__WEBPACK_IMPORTED_MODULE_3__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_3__["LINK_All"]).then(response => response.json()).then(data => {
-        console.log(data);
-
         if (data.status == "success") {
           const temp = [];
           data.data.map(item => {
@@ -964,7 +961,7 @@ class ListImage extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 71
       },
       __self: this
     }, "Danh s\xE1ch c\xE1c \u1EA3nh", this.state.item_1 != null ? this.PostLink(this.state.item_1) : null, this.state.item1 != null ? this.PostLink(this.state.item1) : null);
@@ -972,7 +969,7 @@ class ListImage extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (ListImage);
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_5__["withRouter"])(ListImage));
 
 /***/ }),
 
@@ -1045,17 +1042,19 @@ const LINK_All = "/chatbot/phongtruyenthong/all";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./pages/components/MyLayout.js");
-/* harmony import */ var _constant_URL__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constant/URL */ "./pages/constant/URL.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_ListImage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ListImage */ "./pages/components/ListImage.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MyLayout */ "./pages/components/MyLayout.js");
+/* harmony import */ var _constant_URL__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../constant/URL */ "./pages/constant/URL.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_ListImage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ListImage */ "./pages/components/ListImage.js");
+
 var _jsxFileName = "/home/piggy/Desktop/app/phongtruyenthong/pages/phongtruyenthong/[id].js";
 
 
@@ -1064,6 +1063,198 @@ var _jsxFileName = "/home/piggy/Desktop/app/phongtruyenthong/pages/phongtruyenth
 
 
 
+
+class Post extends react__WEBPACK_IMPORTED_MODULE_5__["Component"] {
+  constructor(...args) {
+    super(...args);
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "state", {
+      data: null,
+      id: null,
+      text_en: null,
+      text_vn: null
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "PostLink", id => react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      href: "/phongtruyenthong/[id]",
+      as: `/phongtruyenthong/${id}`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, "\u1EA2nh: ", id))));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "fetchData", router_id => {
+      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()(_constant_URL__WEBPACK_IMPORTED_MODULE_3__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_3__["LINK_DETAIL"] + router_id).then(response => response.json()).then(data => {
+        console.log(data);
+
+        if (data.status == "success") {
+          this.setState({
+            data: data,
+            id: router_id,
+            text_vn: data.data[0].text_vn,
+            text_en: data.data[0].text_en
+          });
+        }
+      });
+    });
+  }
+
+  componentDidMount() {
+    const {
+      router
+    } = this.props;
+    console.log(router.query.id);
+    this.fetchData(router.query.id);
+  }
+
+  render() {
+    if (this.state.id != this.props.router.query.id) {
+      this.fetchData(this.props.router.query.id);
+    }
+
+    if (this.state.data == null) {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, "404 not found"));
+    } else if (this.state.data != null) {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_ListImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        id: this.state.id,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }, "\u1EA2nh: ", this.state.id), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }, "Th\xF4ng tin c\u1EE7a \u1EA3nh"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        style: style_main,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        style: style_item,
+        src: _constant_URL__WEBPACK_IMPORTED_MODULE_3__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_3__["LINK_IMAGE"] + this.state.id + ".jpg",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        },
+        __self: this
+      }, "Th\xF4ng tin ti\u1EBFng Vi\u1EC7t"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("textarea", {
+        rows: "4",
+        cols: "60",
+        type: "text",
+        value: this.state.text_vn,
+        onChange: event => this.setState({
+          text_vn: event.target.value
+        }),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83
+        },
+        __self: this
+      }, "Th\xF4ng tin ti\u1EBFng Anh"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("textarea", {
+        rows: "4",
+        cols: "60",
+        type: "text",
+        value: this.state.text_en,
+        onChange: event => this.setState({
+          text_en: event.target.value
+        }),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        type: "submit",
+        value: "Submit",
+        onClick: () => {
+          console.log("submit");
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      })))));
+    }
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Post));
 const style_main = {
   display: "flex",
   flexDirection: "row",
@@ -1072,193 +1263,12 @@ const style_main = {
 const style_item = {
   flex: 1,
   maxWidth: 800,
-  maxHeight: 800
+  maxHeight: 800,
+  imageOrientation: "from-image"
 };
 const style_text = {
   padding: 50
 };
-
-const PostLink = props => react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 26
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-  href: "/phongtruyenthong/[id]",
-  as: `/phongtruyenthong/${props.id}`,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 27
-  },
-  __self: undefined
-}, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("a", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 28
-  },
-  __self: undefined
-}, props.id)));
-
-const Post = props => {
-  console.log("render", props);
-  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_0__["useRouter"])();
-  const link_image = _constant_URL__WEBPACK_IMPORTED_MODULE_2__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_2__["LINK_IMAGE"] + router.query.id + ".jpg";
-  console.log(props.detail_image);
-
-  if (props.detail_image == null) {
-    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
-      },
-      __self: undefined
-    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44
-      },
-      __self: undefined
-    }, "404 not found"));
-  } else {
-    const data = props.detail_image.data[0];
-    const [text_vn, set_text_vn] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(data.text_vn);
-    const [text_en, set_text_en] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(data.text_en);
-    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53
-      },
-      __self: undefined
-    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_ListImage__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      id: router.query.id,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54
-      },
-      __self: undefined
-    }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h1", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: undefined
-    }, "\u1EA2nh: ", router.query.id), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 56
-      },
-      __self: undefined
-    }, "Thong tin cua anh "), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
-      style: style_main,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57
-      },
-      __self: undefined
-    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58
-      },
-      __self: undefined
-    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("img", {
-      style: style_item,
-      src: link_image,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: undefined
-    })), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
-      style: style_text,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 61
-      },
-      __self: undefined
-    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("form", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: undefined
-    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 63
-      },
-      __self: undefined
-    }, "Th\xF4ng tin ti\u1EBFng Vi\u1EC7t"), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("textarea", {
-      rows: "4",
-      cols: "50",
-      type: "text",
-      name: "fname",
-      value: props.detail_image.data[0].text_vn,
-      onChange: event => set_text_vn(event.target.value),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: undefined
-    }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 73
-      },
-      __self: undefined
-    }, "Th\xF4ng tin ti\u1EBFng Anh"), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("textarea", {
-      rows: "4",
-      cols: "50",
-      type: "text",
-      name: "fname",
-      value: text_en,
-      onChange: event => set_text_en(event.target.value),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 74
-      },
-      __self: undefined
-    }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("br", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 83
-      },
-      __self: undefined
-    }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", {
-      type: "submit",
-      value: "Submit",
-      onClick: () => {
-        console.log();
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 84
-      },
-      __self: undefined
-    })))));
-  }
-};
-
-Post.getInitialProps = async function (context) {
-  const id = context.query.id;
-  const uri = _constant_URL__WEBPACK_IMPORTED_MODULE_2__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_2__["LINK_DETAIL"] + id;
-  console.log(uri);
-  const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()(uri);
-  const detail_image = await res.json();
-
-  if (detail_image.status == "error") {
-    return {
-      detail_image: null
-    };
-  }
-
-  return {
-    detail_image: detail_image
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Post);
 
 /***/ }),
 

@@ -2,7 +2,7 @@ import { Component } from "react";
 import fetch from "isomorphic-unfetch";
 import { LOCALHOST, LINK_All } from "../constant/URL";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter, withRouter } from "next/router";
 
 class ListImage extends Component {
   state = {
@@ -25,12 +25,9 @@ class ListImage extends Component {
   }
 
   fetchData = () => {
-    console.log(this.props.id);
-
     fetch(LOCALHOST + LINK_All)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         if (data.status == "success") {
           const temp = [];
           data.data.map(item => {
@@ -80,4 +77,4 @@ class ListImage extends Component {
   }
 }
 
-export default ListImage;
+export default withRouter(ListImage);

@@ -10117,12 +10117,9 @@ function (_Component) {
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "fetchData", function () {
-      console.log(_this.props.id);
       isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8___default()(_constant_URL__WEBPACK_IMPORTED_MODULE_9__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_9__["LINK_All"]).then(function (response) {
         return response.json();
       }).then(function (data) {
-        console.log(data);
-
         if (data.status == "success") {
           var temp = [];
           data.data.map(function (item) {
@@ -10175,7 +10172,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 71
         },
         __self: this
       }, "Danh s\xE1ch c\xE1c \u1EA3nh", this.state.item_1 != null ? this.PostLink(this.state.item_1) : null, this.state.item1 != null ? this.PostLink(this.state.item1) : null);
@@ -10185,7 +10182,7 @@ function (_Component) {
   return ListImage;
 }(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (ListImage);
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_11__["withRouter"])(ListImage));
 
 /***/ }),
 
@@ -10258,21 +10255,28 @@ var LINK_All = "/chatbot/phongtruyenthong/all";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/MyLayout */ "./pages/components/MyLayout.js");
-/* harmony import */ var _constant_URL__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../constant/URL */ "./pages/constant/URL.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_ListImage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ListImage */ "./pages/components/ListImage.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/MyLayout */ "./pages/components/MyLayout.js");
+/* harmony import */ var _constant_URL__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../constant/URL */ "./pages/constant/URL.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_ListImage__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/ListImage */ "./pages/components/ListImage.js");
+
+
+
+
 
 
 
@@ -10284,6 +10288,227 @@ var _jsxFileName = "/home/piggy/Desktop/app/phongtruyenthong/pages/phongtruyenth
 
 
 
+
+var Post =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Post, _Component);
+
+  function Post() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Post);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Post)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
+      data: null,
+      id: null,
+      text_en: null,
+      text_vn: null
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "PostLink", function (id) {
+      return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
+        href: "/phongtruyenthong/[id]",
+        as: "/phongtruyenthong/".concat(id),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("a", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }, "\u1EA2nh: ", id)));
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "fetchData", function (router_id) {
+      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10___default()(_constant_URL__WEBPACK_IMPORTED_MODULE_9__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_9__["LINK_DETAIL"] + router_id).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        console.log(data);
+
+        if (data.status == "success") {
+          _this.setState({
+            data: data,
+            id: router_id,
+            text_vn: data.data[0].text_vn,
+            text_en: data.data[0].text_en
+          });
+        }
+      });
+    });
+
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Post, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var router = this.props.router;
+      console.log(router.query.id);
+      this.fetchData(router.query.id);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      if (this.state.id != this.props.router.query.id) {
+        this.fetchData(this.props.router.query.id);
+      }
+
+      if (this.state.data == null) {
+        return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55
+          },
+          __self: this
+        }, "404 not found"));
+      } else if (this.state.data != null) {
+        return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_components_ListImage__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          id: this.state.id,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("h1", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62
+          },
+          __self: this
+        }, "\u1EA2nh: ", this.state.id), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 63
+          },
+          __self: this
+        }, "Th\xF4ng tin c\u1EE7a \u1EA3nh"), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("div", {
+          style: style_main,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 64
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("img", {
+          style: style_item,
+          src: _constant_URL__WEBPACK_IMPORTED_MODULE_9__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_9__["LINK_IMAGE"] + this.state.id + ".jpg",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 66
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("form", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72
+          },
+          __self: this
+        }, "Th\xF4ng tin ti\u1EBFng Vi\u1EC7t"), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("textarea", {
+          rows: "4",
+          cols: "60",
+          type: "text",
+          value: this.state.text_vn,
+          onChange: function onChange(event) {
+            return _this2.setState({
+              text_vn: event.target.value
+            });
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 73
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 83
+          },
+          __self: this
+        }, "Th\xF4ng tin ti\u1EBFng Anh"), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("textarea", {
+          rows: "4",
+          cols: "60",
+          type: "text",
+          value: this.state.text_en,
+          onChange: function onChange(event) {
+            return _this2.setState({
+              text_en: event.target.value
+            });
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 84
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("input", {
+          type: "submit",
+          value: "Submit",
+          onClick: function onClick() {
+            console.log("submit");
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95
+          },
+          __self: this
+        })))));
+      }
+    }
+  }]);
+
+  return Post;
+}(react__WEBPACK_IMPORTED_MODULE_11__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_7__["withRouter"])(Post));
 var style_main = {
   display: "flex",
   flexDirection: "row",
@@ -10292,242 +10517,12 @@ var style_main = {
 var style_item = {
   flex: 1,
   maxWidth: 800,
-  maxHeight: 800
+  maxHeight: 800,
+  imageOrientation: "from-image"
 };
 var style_text = {
   padding: 50
 };
-
-var PostLink = function PostLink(props) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-    href: "/phongtruyenthong/[id]",
-    as: "/phongtruyenthong/".concat(props.id),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, props.id)));
-};
-
-var Post = function Post(props) {
-  console.log("render", props);
-  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["useRouter"])();
-  var link_image = _constant_URL__WEBPACK_IMPORTED_MODULE_5__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_5__["LINK_IMAGE"] + router.query.id + ".jpg";
-  console.log(props.detail_image);
-
-  if (props.detail_image == null) {
-    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44
-      },
-      __self: this
-    }, "404 not found"));
-  } else {
-    var data = props.detail_image.data[0];
-
-    var _useState = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(data.text_vn),
-        _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
-        text_vn = _useState2[0],
-        set_text_vn = _useState2[1];
-
-    var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(data.text_en),
-        _useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState3, 2),
-        text_en = _useState4[0],
-        set_text_en = _useState4[1];
-
-    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_ListImage__WEBPACK_IMPORTED_MODULE_9__["default"], {
-      id: router.query.id,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: this
-    }, "\u1EA2nh: ", router.query.id), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 56
-      },
-      __self: this
-    }, "Thong tin cua anh "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-      style: style_main,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-      style: style_item,
-      src: link_image,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: this
-    })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-      style: style_text,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 61
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 63
-      },
-      __self: this
-    }, "Th\xF4ng tin ti\u1EBFng Vi\u1EC7t"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("textarea", {
-      rows: "4",
-      cols: "50",
-      type: "text",
-      name: "fname",
-      value: props.detail_image.data[0].text_vn,
-      onChange: function onChange(event) {
-        return set_text_vn(event.target.value);
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 73
-      },
-      __self: this
-    }, "Th\xF4ng tin ti\u1EBFng Anh"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("textarea", {
-      rows: "4",
-      cols: "50",
-      type: "text",
-      name: "fname",
-      value: text_en,
-      onChange: function onChange(event) {
-        return set_text_en(event.target.value);
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 74
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 83
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-      type: "submit",
-      value: "Submit",
-      onClick: function onClick() {
-        console.log();
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 84
-      },
-      __self: this
-    })))));
-  }
-};
-
-Post.getInitialProps =
-/*#__PURE__*/
-function () {
-  var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  /*#__PURE__*/
-  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(context) {
-    var id, uri, res, detail_image;
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            id = context.query.id;
-            uri = _constant_URL__WEBPACK_IMPORTED_MODULE_5__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_5__["LINK_DETAIL"] + id;
-            console.log(uri);
-            _context.next = 5;
-            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()(uri);
-
-          case 5:
-            res = _context.sent;
-            _context.next = 8;
-            return res.json();
-
-          case 8:
-            detail_image = _context.sent;
-
-            if (!(detail_image.status == "error")) {
-              _context.next = 11;
-              break;
-            }
-
-            return _context.abrupt("return", {
-              detail_image: null
-            });
-
-          case 11:
-            return _context.abrupt("return", {
-              detail_image: detail_image
-            });
-
-          case 12:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function (_x) {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-/* harmony default export */ __webpack_exports__["default"] = (Post);
 
 /***/ }),
 
