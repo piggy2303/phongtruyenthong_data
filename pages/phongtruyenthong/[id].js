@@ -1,6 +1,11 @@
 import { useRouter, withRouter } from "next/router";
 import Layout from "../components/MyLayout";
-import { LOCALHOST, LINK_IMAGE, LINK_DETAIL } from "../constant/URL";
+import {
+  LOCALHOST,
+  LINK_IMAGE,
+  LINK_DETAIL,
+  LINK_UPDATE
+} from "../constant/URL";
 import fetch from "isomorphic-unfetch";
 import React, { useState, Component } from "react";
 import Link from "next/link";
@@ -34,6 +39,8 @@ class Post extends Component {
       .then(data => {
         console.log(data);
         if (data.status == "success") {
+          console.log(data.data[0]);
+
           this.setState({
             data: data,
             id: router_id,
@@ -44,11 +51,46 @@ class Post extends Component {
       });
   };
 
-  render() {
+  componentDidUpdate() {
     if (this.state.id != this.props.router.query.id) {
       this.fetchData(this.props.router.query.id);
     }
+  }
 
+  textareaShow = (title, value, onChange) => {
+    return (
+      <div>
+        <p>{title}</p>
+        <textarea
+          rows="2"
+          cols="100"
+          type="text"
+          value={value}
+          onChange={event => onChange(event)}
+        />
+      </div>
+    );
+  };
+
+  saveInfo = () => {
+    fetch(LOCALHOST + LINK_UPDATE, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        image_id: this.state.id,
+        text_vn: this.state.text_vn,
+        text_en: this.state.text_en
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      });
+  };
+
+  render() {
     if (this.state.data == null) {
       return (
         <Layout>
@@ -69,36 +111,26 @@ class Post extends Component {
               />
 
               <form>
-                <p>Thông tin tiếng Việt</p>
-                <textarea
-                  rows="4"
-                  cols="60"
-                  type="text"
-                  value={this.state.text_vn}
-                  onChange={event =>
-                    this.setState({ text_vn: event.target.value })
+                {this.textareaShow(
+                  "Thông tin tiếng Việt",
+                  this.state.text_vn,
+                  event => {
+                    this.setState({ text_vn: event.target.value });
                   }
-                />
-
-                <p>Thông tin tiếng Anh</p>
-                <textarea
-                  rows="4"
-                  cols="60"
-                  type="text"
-                  value={this.state.text_en}
-                  onChange={event =>
-                    this.setState({ text_en: event.target.value })
+                )}
+                {this.textareaShow(
+                  "Thông tin tiếng Anh",
+                  this.state.text_en,
+                  event => {
+                    this.setState({ text_en: event.target.value });
                   }
-                />
+                )}
 
-                <br />
-                <input
-                  type="submit"
-                  value="Submit"
-                  onClick={() => {
-                    console.log("submit");
-                  }}
-                />
+                <button>
+                  <Link href="#">
+                    <a onClick={() => this.saveInfo()}>Save</a>
+                  </Link>
+                </button>
               </form>
             </div>
           </div>

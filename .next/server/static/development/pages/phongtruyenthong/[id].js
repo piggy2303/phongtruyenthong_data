@@ -88,10 +88,21 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
+
+/***/ }),
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
 /*!************************************************************!*\
@@ -1017,7 +1028,7 @@ function Layout(props) {
 /*!*******************************!*\
   !*** ./pages/constant/URL.js ***!
   \*******************************/
-/*! exports provided: LOCALHOST, LINK_IMAGE, LINK_DETAIL, LINK_All */
+/*! exports provided: LOCALHOST, LINK_IMAGE, LINK_DETAIL, LINK_All, LINK_UPDATE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1026,10 +1037,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LINK_IMAGE", function() { return LINK_IMAGE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LINK_DETAIL", function() { return LINK_DETAIL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LINK_All", function() { return LINK_All; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LINK_UPDATE", function() { return LINK_UPDATE; });
 const LOCALHOST = "http://localhost:5000";
 const LINK_IMAGE = "/chatbot/image/";
 const LINK_DETAIL = "/chatbot/phongtruyenthong/";
 const LINK_All = "/chatbot/phongtruyenthong/all";
+const LINK_UPDATE = "/chatbot/phongtruyenthong/update";
 
 /***/ }),
 
@@ -1042,18 +1055,21 @@ const LINK_All = "/chatbot/phongtruyenthong/all";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MyLayout */ "./pages/components/MyLayout.js");
-/* harmony import */ var _constant_URL__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../constant/URL */ "./pages/constant/URL.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_ListImage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ListImage */ "./pages/components/ListImage.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MyLayout */ "./pages/components/MyLayout.js");
+/* harmony import */ var _constant_URL__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../constant/URL */ "./pages/constant/URL.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_ListImage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ListImage */ "./pages/components/ListImage.js");
+
 
 var _jsxFileName = "/home/piggy/Desktop/app/phongtruyenthong/pages/phongtruyenthong/[id].js";
 
@@ -1064,44 +1080,45 @@ var _jsxFileName = "/home/piggy/Desktop/app/phongtruyenthong/pages/phongtruyenth
 
 
 
-class Post extends react__WEBPACK_IMPORTED_MODULE_5__["Component"] {
+class Post extends react__WEBPACK_IMPORTED_MODULE_6__["Component"] {
   constructor(...args) {
     super(...args);
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "state", {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "state", {
       data: null,
       id: null,
       text_en: null,
       text_vn: null
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "PostLink", id => react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "PostLink", id => react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 23
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+    }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
       href: "/phongtruyenthong/[id]",
       as: `/phongtruyenthong/${id}`,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 24
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+    }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 25
       },
       __self: this
     }, "\u1EA2nh: ", id))));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "fetchData", router_id => {
-      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()(_constant_URL__WEBPACK_IMPORTED_MODULE_3__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_3__["LINK_DETAIL"] + router_id).then(response => response.json()).then(data => {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "fetchData", router_id => {
+      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()(_constant_URL__WEBPACK_IMPORTED_MODULE_4__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_4__["LINK_DETAIL"] + router_id).then(response => response.json()).then(data => {
         console.log(data);
 
         if (data.status == "success") {
+          console.log(data.data[0]);
           this.setState({
             data: data,
             id: router_id,
@@ -1109,6 +1126,49 @@ class Post extends react__WEBPACK_IMPORTED_MODULE_5__["Component"] {
             text_en: data.data[0].text_en
           });
         }
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "textareaShow", (title, value, onChange) => {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }, title), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("textarea", {
+        rows: "2",
+        cols: "100",
+        type: "text",
+        value: value,
+        onChange: event => onChange(event),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }));
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "saveInfo", () => {
+      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()(_constant_URL__WEBPACK_IMPORTED_MODULE_4__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_4__["LINK_UPDATE"], {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
+          image_id: this.state.id,
+          text_vn: this.state.text_vn,
+          text_en: this.state.text_en
+        })
+      }).then(response => response.json()).then(data => {
+        console.log(data);
       });
     });
   }
@@ -1121,140 +1181,115 @@ class Post extends react__WEBPACK_IMPORTED_MODULE_5__["Component"] {
     this.fetchData(router.query.id);
   }
 
-  render() {
+  componentDidUpdate() {
     if (this.state.id != this.props.router.query.id) {
       this.fetchData(this.props.router.query.id);
     }
+  }
 
+  render() {
     if (this.state.data == null) {
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 96
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 97
         },
         __self: this
       }, "404 not found"));
     } else if (this.state.data != null) {
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 102
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_ListImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_ListImage__WEBPACK_IMPORTED_MODULE_8__["default"], {
         id: this.state.id,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 103
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 104
         },
         __self: this
-      }, "\u1EA2nh: ", this.state.id), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+      }, "\u1EA2nh: ", this.state.id), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 105
         },
         __self: this
-      }, "Th\xF4ng tin c\u1EE7a \u1EA3nh"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Th\xF4ng tin c\u1EE7a \u1EA3nh"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         style: style_main,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 106
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 107
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         style: style_item,
-        src: _constant_URL__WEBPACK_IMPORTED_MODULE_3__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_3__["LINK_IMAGE"] + this.state.id + ".jpg",
+        src: _constant_URL__WEBPACK_IMPORTED_MODULE_4__["LOCALHOST"] + _constant_URL__WEBPACK_IMPORTED_MODULE_4__["LINK_IMAGE"] + this.state.id + ".jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 108
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 113
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        },
-        __self: this
-      }, "Th\xF4ng tin ti\u1EBFng Vi\u1EC7t"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("textarea", {
-        rows: "4",
-        cols: "60",
-        type: "text",
-        value: this.state.text_vn,
-        onChange: event => this.setState({
+      }, this.textareaShow("Thông tin tiếng Việt", this.state.text_vn, event => {
+        this.setState({
           text_vn: event.target.value
-        }),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 83
-        },
-        __self: this
-      }, "Th\xF4ng tin ti\u1EBFng Anh"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("textarea", {
-        rows: "4",
-        cols: "60",
-        type: "text",
-        value: this.state.text_en,
-        onChange: event => this.setState({
+        });
+      }), this.textareaShow("Thông tin tiếng Anh", this.state.text_en, event => {
+        this.setState({
           text_en: event.target.value
-        }),
+        });
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 129
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 130
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
-        type: "submit",
-        value: "Submit",
-        onClick: () => {
-          console.log("submit");
-        },
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        onClick: () => this.saveInfo(),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 131
         },
         __self: this
-      })))));
+      }, "Save")))))));
     }
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Post));
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Post));
 const style_main = {
   display: "flex",
   flexDirection: "row",
@@ -1272,7 +1307,7 @@ const style_text = {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!**********************************************!*\
   !*** multi ./pages/phongtruyenthong/[id].js ***!
   \**********************************************/
@@ -1281,6 +1316,17 @@ const style_text = {
 
 module.exports = __webpack_require__(/*! /home/piggy/Desktop/app/phongtruyenthong/pages/phongtruyenthong/[id].js */"./pages/phongtruyenthong/[id].js");
 
+
+/***/ }),
+
+/***/ "core-js/library/fn/json/stringify":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/json/stringify" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 
