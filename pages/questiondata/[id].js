@@ -13,20 +13,21 @@ import React, { useState, Component } from "react";
 import Link from "next/link";
 import ListImage from "../components/ListImage";
 
-class Post extends Component {
-  state = {
-    data: null,
-    id: this.props.router.query.id,
-    text_new: ""
-  };
+class PostQuestion extends Component {
+  static async getInitialProps({ req }) {
+    const userAgent = req ? req.headers["user-agent"] : navigator.userAgent;
+    return { userAgent };
+  }
 
-  //   PostLink = id => (
-  //     <li>
-  //       <Link href="/phongtruyenthong/[id]" as={`/phongtruyenthong/${id}`}>
-  //         <a>Ảnh: {id}</a>
-  //       </Link>
-  //     </li>
-  //   );
+  constructor(props) {
+    super(props);
+    // Don't do this!
+    this.state = {
+      data: null,
+      id: this.props.router.query.id,
+      text_new: ""
+    };
+  }
 
   componentDidMount() {
     const { router } = this.props;
@@ -69,12 +70,15 @@ class Post extends Component {
       .then(data => {
         console.log(data);
         this.setState({
-          text_new: ""
+          text_new: "",
+          data: [...this.state.data, data.data]
         });
       });
   };
 
   render() {
+    console.log(this.props.router.query.id);
+
     if (this.state.data == null) {
       return (
         <Layout>
@@ -110,8 +114,8 @@ class Post extends Component {
                 </div>
 
                 <button>
-                  <Link href="#">
-                    <a onClick={() => this.saveInfo()}>Save</a>
+                  <Link href="">
+                    <a onClick={() => this.saveInfo()}>ADD</a>
                   </Link>
                 </button>
               </form>
@@ -123,7 +127,7 @@ class Post extends Component {
   }
 }
 
-export default withRouter(Post);
+export default withRouter(PostQuestion);
 
 const style_main = {
   display: "flex",
