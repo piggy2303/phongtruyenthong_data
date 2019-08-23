@@ -126,12 +126,34 @@ class Post extends Component {
                   }
                 )}
 
+                <div>
+                  <p>Thuyết minh</p>
+                  <textarea rows="2" cols="100" type="text" />
+                </div>
+
+                <div>
+                  <p>Tóm tắt</p>
+                  <textarea rows="2" cols="100" type="text" />
+                </div>
+
+                <div>
+                  <p>Câu trả lời cho ask_what</p>
+                  <textarea rows="2" cols="100" type="text" />
+                </div>
+
+                <div>
+                  <p>Câu trả lời cho ask_who</p>
+                  <textarea rows="2" cols="100" type="text" />
+                </div>
+
                 <button>
                   <Link href="#">
                     <a onClick={() => this.saveInfo()}>Save</a>
                   </Link>
                 </button>
               </form>
+
+              <ListImage id={this.state.id} />
             </div>
           </div>
         </Layout>
