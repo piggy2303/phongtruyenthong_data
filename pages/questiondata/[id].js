@@ -91,8 +91,10 @@ class PostQuestion extends Component {
           <h1>Intent: {this.state.id}</h1>
           <p>Danh sách các câu hỏi</p>
           <ul>
-            {this.state.data.map(item => (
-              <li>{item.text}</li>
+            {this.state.data.map((item, index) => (
+              <li>
+                <p>{item.text}</p>
+              </li>
             ))}
           </ul>
           <div style={style_main}>

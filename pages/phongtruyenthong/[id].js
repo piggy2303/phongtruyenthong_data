@@ -15,8 +15,11 @@ class Post extends Component {
   state = {
     data: null,
     id: null,
-    text_en: null,
-    text_vn: null
+    text_en: "",
+    text_vn: "",
+    answer_what: "",
+    answer_who: "",
+    answer_where: ""
   };
 
   PostLink = id => (
@@ -45,7 +48,10 @@ class Post extends Component {
             data: data,
             id: router_id,
             text_vn: data.data[0].text_vn,
-            text_en: data.data[0].text_en
+            text_en: data.data[0].text_en,
+            answer_what: data.data[0].answer_what,
+            answer_who: data.data[0].answer_who,
+            answer_where: data.data[0].answer_where
           });
         }
       });
@@ -81,7 +87,10 @@ class Post extends Component {
       body: JSON.stringify({
         image_id: this.state.id,
         text_vn: this.state.text_vn,
-        text_en: this.state.text_en
+        text_en: this.state.text_en,
+        answer_what: this.state.answer_what,
+        answer_who: this.state.answer_who,
+        answer_where: this.state.answer_where
       })
     })
       .then(response => response.json())
@@ -126,25 +135,28 @@ class Post extends Component {
                   }
                 )}
 
-                <div>
-                  <p>Thuyết minh</p>
-                  <textarea rows="2" cols="100" type="text" />
-                </div>
+                {this.textareaShow(
+                  "Câu trả lời cho ask_what",
+                  this.state.answer_what,
+                  event => {
+                    this.setState({ answer_what: event.target.value });
+                  }
+                )}
 
-                <div>
-                  <p>Tóm tắt</p>
-                  <textarea rows="2" cols="100" type="text" />
-                </div>
-
-                <div>
-                  <p>Câu trả lời cho ask_what</p>
-                  <textarea rows="2" cols="100" type="text" />
-                </div>
-
-                <div>
-                  <p>Câu trả lời cho ask_who</p>
-                  <textarea rows="2" cols="100" type="text" />
-                </div>
+                {this.textareaShow(
+                  "Câu trả lời cho ask_who",
+                  this.state.answer_who,
+                  event => {
+                    this.setState({ answer_who: event.target.value });
+                  }
+                )}
+                {this.textareaShow(
+                  "Câu trả lời cho ask_where",
+                  this.state.answer_where,
+                  event => {
+                    this.setState({ answer_where: event.target.value });
+                  }
+                )}
 
                 <button>
                   <Link href="#">

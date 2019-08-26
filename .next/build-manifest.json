@@ -20,7 +20,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/phongtruyenthong/[id]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/questiondata": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/questiondata/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
