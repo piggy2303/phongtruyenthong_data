@@ -93,7 +93,7 @@ class PostQuestion extends Component {
           <ul>
             {this.state.data.map((item, index) => (
               <li>
-                <p>{item.text}</p>
+                <p>{item.question}</p>
               </li>
             ))}
           </ul>

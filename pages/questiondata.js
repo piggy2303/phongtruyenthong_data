@@ -4,19 +4,11 @@ import { Component } from "react";
 import fetch from "isomorphic-unfetch";
 import { LOCALHOST, LINK_All } from "./constant/URL";
 import { useRouter } from "next/router";
+import { intent } from "./constant/intent";
 
 class Blog extends Component {
   state = {
-    listArr: [
-      "greeting",
-      "chat",
-      // "end_conversation",
-      "ask_what",
-      "ask_where",
-      "ask_who",
-      "command_lead_way",
-      "introduce"
-    ]
+    listArr: intent
   };
 
   PostLink = id => (

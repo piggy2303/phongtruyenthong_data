@@ -136,7 +136,7 @@ class Post extends Component {
                 )}
 
                 {this.textareaShow(
-                  "Câu trả lời cho ask_what",
+                  "What is in the picture:",
                   this.state.answer_what,
                   event => {
                     this.setState({ answer_what: event.target.value });
@@ -144,14 +144,14 @@ class Post extends Component {
                 )}
 
                 {this.textareaShow(
-                  "Câu trả lời cho ask_who",
+                  "Who is in the picture:",
                   this.state.answer_who,
                   event => {
                     this.setState({ answer_who: event.target.value });
                   }
                 )}
                 {this.textareaShow(
-                  "Câu trả lời cho ask_where",
+                  "Where is picture about",
                   this.state.answer_where,
                   event => {
                     this.setState({ answer_where: event.target.value });
